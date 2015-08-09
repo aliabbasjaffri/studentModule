@@ -2,6 +2,9 @@ package SH1;
 
 import android.annotation.TargetApi;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Canvas;
+import android.graphics.Paint;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.media.ExifInterface;
@@ -45,7 +48,7 @@ public class SH1 extends Fragment
     public static Drawable original_dp;
     public static Drawable blurred_dp;
 
-    public static Bitmap bitmap_original_dp;
+    public Bitmap bitmap_original_dp;
     public static Bitmap bitmap_blurred_dp;
 
     LinearLayout blurredBackground;
@@ -56,8 +59,6 @@ public class SH1 extends Fragment
     TextView profileName;
     TextView profileDetail;
     TextView universityName;
-    TextView mTitle;
-    Toolbar toolbar;
     Button video;
     Button audio;
     Button button3;
@@ -126,82 +127,82 @@ public class SH1 extends Fragment
         button3 = (Button) view.findViewById(R.id.sh1Button3);
         button4 = (Button) view.findViewById(R.id.sh1Button4);
 
-        if( profile_pic_path != null && !profile_pic_path.isEmpty() )
-        {
-            ViewTreeObserver vto = dpContainer.getViewTreeObserver();
-            vto.addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
+        bitmap_original_dp = BitmapFactory.decodeResource(getResources(), R.drawable.jane);
 
-                @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
-                @Override
-                public void onGlobalLayout() {
-                    if ( original_dp == null )
-                    {
-                        Bitmap scaledBitmap = Bitmap.createScaledBitmap( bitmap_original_dp, dpContainer.getWidth(), dpContainer.getHeight(), false);
-                        Drawable drawable_dp = new BitmapDrawable(getResources(), scaledBitmap);
-                        original_dp = drawable_dp;
-                    }
-                    if ( profile_pic_path != null && !profile_pic_path.isEmpty())
-                    {
-                        ExifInterface ei = null;
-                        try
-                        {
-                            ei = new ExifInterface(profile_pic_path);
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                        }
 
-                        int orientation = ei.getAttributeInt(ExifInterface.TAG_ORIENTATION,
-                                ExifInterface.ORIENTATION_UNDEFINED);
+        ViewTreeObserver vto = dpContainer.getViewTreeObserver();
+        vto.addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
 
-                        profilePicture.setVisibility(View.VISIBLE);
+            @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
+            @Override
+            public void onGlobalLayout() {
 
-                        int sdk = android.os.Build.VERSION.SDK_INT;
-                        if (sdk < android.os.Build.VERSION_CODES.JELLY_BEAN)
-                        {
-                            profilePicture.setBackgroundDrawable(original_dp);
-                        } else {
-                            profilePicture.setBackground(original_dp);
-                        }
-
-                        ViewTreeObserver obs = dpContainer.getViewTreeObserver();
-                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN)
-                        {
-                            obs.removeOnGlobalLayoutListener(this);
-                        }
-                        else
-                        {
-                            obs.removeGlobalOnLayoutListener(this);
-                        }
-                        if ( blurred_dp == null)
-                        {
-                            Bitmap blurredBitmap = Bitmap.createScaledBitmap( bitmap_original_dp, 5, 5, false);
-                            bitmap_blurred_dp = blurredBitmap;
-
-                            //SQLiteHandler db = SQLiteHandler.getInstance(getActivity().getApplicationContext());
-                            //db.updateField(SQLiteHandler.BLURRED_DP_BITMAP, Base64CODEC.convertToBase64(UserData.bitmap_blurred_dp));
-
-                            blurredBitmap = Bitmap.createScaledBitmap(blurredBitmap, blurredBackground.getWidth(), blurredBackground.getHeight(), true);
-                            Drawable blurredDrawable = new BitmapDrawable(getResources(), blurredBitmap);
-                            blurred_dp = blurredDrawable;
-                        }
-
-                        if (sdk < android.os.Build.VERSION_CODES.JELLY_BEAN)
-                        {
-                            blurredBackground.setBackgroundDrawable(blurred_dp);
-                        }
-                        else
-                        {
-                            blurredBackground.setBackground(blurred_dp);
-                        }
-                    }
-
+                if (original_dp == null) {
+                    Bitmap scaledBitmap = Bitmap.createScaledBitmap(bitmap_original_dp, dpContainer.getWidth(), dpContainer.getHeight(), false);
+                    Drawable drawable_dp = new BitmapDrawable(getResources(), scaledBitmap);
+                    original_dp = drawable_dp;
                 }
-            });
 
-        }
+                //if (profile_pic_path != null && !profile_pic_path.isEmpty()) {
+                    /*
 
-        blurredBackground.setBackgroundResource(R.drawable.jane);
-        profilePicture.setBackgroundResource(R.drawable.jane);
+                    ExifInterface ei = null;
+                    try
+                    {
+                        ei = new ExifInterface(profile_pic_path);
+                    }
+                    catch (IOException e) {
+                        e.printStackTrace();
+                    }
+
+                    int orientation = ei.getAttributeInt(ExifInterface.TAG_ORIENTATION, ExifInterface.ORIENTATION_UNDEFINED);
+                    */
+                    profilePicture.setVisibility(View.VISIBLE);
+
+                    int sdk = android.os.Build.VERSION.SDK_INT;
+                    if (sdk < android.os.Build.VERSION_CODES.JELLY_BEAN) {
+                        profilePicture.setBackgroundDrawable(original_dp);
+                    } else {
+                        profilePicture.setBackground(original_dp);
+                    }
+
+                    ViewTreeObserver obs = dpContainer.getViewTreeObserver();
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN)
+                    {
+                        obs.removeOnGlobalLayoutListener(this);
+                    }
+                    else
+                    {
+                        obs.removeGlobalOnLayoutListener(this);
+                    }
+                    if (blurred_dp == null)
+                    {
+                        Bitmap blurredBitmap = Bitmap.createScaledBitmap(bitmap_original_dp, 15, 15, true);
+
+                        Paint paint = new Paint( Paint.FILTER_BITMAP_FLAG );
+                        paint.setAntiAlias(true);
+                        paint.setFilterBitmap(true);
+                        paint.setDither(true);
+
+                        Canvas canvas = new Canvas();
+                        canvas.drawBitmap(blurredBitmap, blurredBackground.getWidth(), blurredBackground.getHeight(), paint);
+
+                        Drawable blurredDrawable = new BitmapDrawable(getResources(), blurredBitmap);
+                        blurred_dp = blurredDrawable;
+                    }
+
+                    if (sdk < android.os.Build.VERSION_CODES.JELLY_BEAN) {
+                        blurredBackground.setBackgroundDrawable(blurred_dp);
+                    } else {
+                        blurredBackground.setBackground(blurred_dp);
+                    }
+                //}
+
+            }
+        });
+
+        //blurredBackground.setBackgroundResource(R.drawable.jane);
+        //profilePicture.setBackgroundResource(R.drawable.jane);
         profilePictureBadge.setBackgroundResource(R.drawable.tutor_profile_badge);
         countryPicture.setBackgroundResource(R.drawable.country);
 

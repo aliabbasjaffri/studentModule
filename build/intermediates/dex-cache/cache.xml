@@ -2,11 +2,11 @@
 <items version="2" >
 
     <item
-        jar="/Users/aliabbasjaffri/Documents/Freelancing/StudentModule/app/build/intermediates/exploded-aar/com.android.support/design/22.2.0/jars/classes.jar"
+        jar="/Users/aliabbasjaffri/Documents/Freelancing/StudentModule/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/jars/classes.jar"
         jumboMode="false"
         revision="22.0.1"
-        sha1="fc63b820d54c8a27a3a614bdd93920e0076581c2">
-        <dex dex="/Users/aliabbasjaffri/Documents/Freelancing/StudentModule/app/build/intermediates/pre-dexed/debug/classes-699a5324298973893fb17405ddb33bc650b6ec30.jar" />
+        sha1="1ee588ff2c4daf7b97c1cbf922a6c7f027285c2f">
+        <dex dex="/Users/aliabbasjaffri/Documents/Freelancing/StudentModule/app/build/intermediates/pre-dexed/debug/classes-86dd6d5081233908765d0885c10e841edf5a6a92.jar" />
     </item>
     <item
         jar="/Users/aliabbasjaffri/Documents/Freelancing/StudentModule/app/libs/volley.jar"
@@ -16,18 +16,25 @@
         <dex dex="/Users/aliabbasjaffri/Documents/Freelancing/StudentModule/app/build/intermediates/pre-dexed/debug/volley-5053fc668ec6e6b24ccd8019e92ec0e2defb4630.jar" />
     </item>
     <item
+        jar="/Users/aliabbasjaffri/Documents/Freelancing/StudentModule/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/jars/libs/internal_impl-22.2.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="57f2ab85c164ff1676ec64dee787981c046fab79">
+        <dex dex="/Users/aliabbasjaffri/Documents/Freelancing/StudentModule/app/build/intermediates/pre-dexed/debug/internal_impl-22.2.0-518d6f4d7ed22e73d0c2d49449f75f20caf0b37b.jar" />
+    </item>
+    <item
+        jar="/Users/aliabbasjaffri/Documents/Freelancing/StudentModule/app/build/intermediates/exploded-aar/com.android.support/design/22.2.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="fc63b820d54c8a27a3a614bdd93920e0076581c2">
+        <dex dex="/Users/aliabbasjaffri/Documents/Freelancing/StudentModule/app/build/intermediates/pre-dexed/debug/classes-699a5324298973893fb17405ddb33bc650b6ec30.jar" />
+    </item>
+    <item
         jar="/Users/aliabbasjaffri/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/22.2.0/support-annotations-22.2.0.jar"
         jumboMode="false"
         revision="22.0.1"
         sha1="66b42a1f3eb7676070b7ef7f14b603483aecbee1">
         <dex dex="/Users/aliabbasjaffri/Documents/Freelancing/StudentModule/app/build/intermediates/pre-dexed/debug/support-annotations-22.2.0-5e608579d7d087e012d69c46219ba9d507accb6e.jar" />
-    </item>
-    <item
-        jar="/Users/aliabbasjaffri/Documents/Freelancing/StudentModule/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/jars/classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="73753982da6bde518f3a4c6b372749981d14d1a0">
-        <dex dex="/Users/aliabbasjaffri/Documents/Freelancing/StudentModule/app/build/intermediates/pre-dexed/debug/classes-4f4c4ae723cf04aeb7fd0e4de8723525e4b4edfb.jar" />
     </item>
     <item
         jar="/Users/aliabbasjaffri/Library/Android/sdk/build-tools/22.0.1/renderscript/lib/renderscript-v8.jar"
@@ -37,18 +44,11 @@
         <dex dex="/Users/aliabbasjaffri/Documents/Freelancing/StudentModule/app/build/intermediates/pre-dexed/debug/renderscript-v8-168ae51267bc7f6aaba7c588df98dc20214e483e.jar" />
     </item>
     <item
-        jar="/Users/aliabbasjaffri/Documents/Freelancing/StudentModule/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/jars/classes.jar"
+        jar="/Users/aliabbasjaffri/Documents/Freelancing/StudentModule/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/jars/classes.jar"
         jumboMode="false"
         revision="22.0.1"
-        sha1="1ee588ff2c4daf7b97c1cbf922a6c7f027285c2f">
-        <dex dex="/Users/aliabbasjaffri/Documents/Freelancing/StudentModule/app/build/intermediates/pre-dexed/debug/classes-86dd6d5081233908765d0885c10e841edf5a6a92.jar" />
-    </item>
-    <item
-        jar="/Users/aliabbasjaffri/Documents/Freelancing/StudentModule/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/jars/libs/internal_impl-22.2.0.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="57f2ab85c164ff1676ec64dee787981c046fab79">
-        <dex dex="/Users/aliabbasjaffri/Documents/Freelancing/StudentModule/app/build/intermediates/pre-dexed/debug/internal_impl-22.2.0-518d6f4d7ed22e73d0c2d49449f75f20caf0b37b.jar" />
+        sha1="73753982da6bde518f3a4c6b372749981d14d1a0">
+        <dex dex="/Users/aliabbasjaffri/Documents/Freelancing/StudentModule/app/build/intermediates/pre-dexed/debug/classes-4f4c4ae723cf04aeb7fd0e4de8723525e4b4edfb.jar" />
     </item>
 
 </items>

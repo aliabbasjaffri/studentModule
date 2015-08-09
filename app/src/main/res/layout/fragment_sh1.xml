@@ -25,7 +25,6 @@
             android:layout_above="@+id/linearLayout2"
             android:layout_alignParentTop="true"
             android:orientation="vertical"
-            android:background="@color/backgroundcolor"
             android:id="@+id/sh1TopContainer"
             android:layout_weight="4"
             android:minWidth="800dp"
@@ -50,8 +49,7 @@
                     android:layout_height="180dp"
                     android:id="@+id/sh1ProfileImage"
                     android:layout_alignParentTop="true"
-                    android:layout_centerHorizontal="true"
-                    android:background="@drawable/jane">
+                    android:layout_centerHorizontal="true">
 
 
                     <ImageView

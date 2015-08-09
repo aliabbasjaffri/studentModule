@@ -110,17 +110,8 @@ public class SH03 extends Fragment {
                     confirmButton.setEnabled(false);
 
                     recordButton.setText("STOP");
-                    recordButton.setEnabled(false);
                     recordButton.setCompoundDrawablesWithIntrinsicBounds(R.drawable.stopbtn, 0, 0, 0);
 
-                    final Handler handler = new Handler();
-                    handler.postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            // Do something after 2.5s = 2500ms
-                            recordButton.setEnabled(true);
-                        }
-                    }, 3000);
                 } else {
                     stop();
                     confirmButton.setBackgroundResource(R.drawable.circular_button_purple);
@@ -150,6 +141,7 @@ public class SH03 extends Fragment {
     {
         try
         {
+            initializeMediaRecorder();
             myRecorder.prepare();
             myRecorder.start();
 
