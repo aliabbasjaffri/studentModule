@@ -84,23 +84,31 @@ public class SH03_1 extends Fragment {
 
         playButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v)
-            {
+            public void onClick(View v) {
                 player = !player;
 
-                if(!player)
+                if (!player)
                 {
                     mPlayer.reset();
                     playButton.setBackgroundResource(R.drawable.playbtn_white);
                 }
-
-                else {
+                else
+                {
                     mPlayer = MediaPlayer.create(getActivity(), Uri.parse(Environment.getExternalStorageDirectory().getAbsolutePath() + "/mt_recording.3gpp"));
+                    mPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+
+                        public void onCompletion(MediaPlayer mp) {
+                            mPlayer.reset();
+                            playButton.setBackgroundResource(R.drawable.playbtn_white);
+                        }
+                    });
                     mPlayer.start();
                     playButton.setBackgroundResource(R.drawable.pause_icon);
                 }
             }
         });
+
+
 
         noButton.setOnClickListener(new View.OnClickListener() {
             @Override

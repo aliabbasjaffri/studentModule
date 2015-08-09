@@ -67,7 +67,8 @@
             android:layout_alignTop="@+id/view7"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="15dp"
-            android:background="@drawable/playbtn_white" />
+            android:background="@drawable/playbtn_white"
+            android:gravity="center" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -75,10 +76,10 @@
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:text="Listen"
             android:id="@+id/textView18"
-            android:layout_below="@+id/sh03_1PlayButton"
-            android:layout_centerHorizontal="true"
             android:textColor="@color/white"
-            android:layout_marginTop="5dp" />
+            android:layout_alignBottom="@+id/view7"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="5dp" />
     </RelativeLayout>
 
 </ScrollView>
