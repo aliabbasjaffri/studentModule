@@ -1,25 +1,18 @@
 package com.studentmodule;
 
 import android.content.Intent;
-import android.graphics.Color;
-import android.graphics.drawable.Drawable;
-import android.support.design.widget.TabLayout;
-import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
-import android.text.Spannable;
-import android.text.SpannableString;
-import android.text.style.ImageSpan;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
-
 import java.util.ArrayList;
+import SH4.*;
 import SHA.*;
 
 public class StudentFirstActivity extends AppCompatActivity
@@ -30,6 +23,7 @@ public class StudentFirstActivity extends AppCompatActivity
     private Toolbar toolbar;
     private TextView mTitle;
 
+    private LinearLayout topRatedTutorsButton;
     private LinearLayout studentDashboardButton;
 
     private ArrayList<SHA> tutorsList;
@@ -37,7 +31,6 @@ public class StudentFirstActivity extends AppCompatActivity
 
     private View firstTutorIndicator;
     private View secondTutorIndicator;
-    private View thirdTutorIndicator;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -47,11 +40,20 @@ public class StudentFirstActivity extends AppCompatActivity
 
         toolbar = (Toolbar) findViewById(R.id.firstActivityToolbarInclude);
         mTitle = (TextView) toolbar.findViewById(R.id.toolbar_title);
-        mTitle.setText("Featured Tutors of the Month");
+        mTitle.setText("Sponsored Tutors of the Month");
 
         firstTutorIndicator  = findViewById(R.id.firstTutorIndicator);
         secondTutorIndicator = findViewById(R.id.secondTutorIndicator);
-        thirdTutorIndicator  = findViewById(R.id.thirdTutorIndicator);
+
+        topRatedTutorsButton = (LinearLayout) findViewById(R.id.topRatedTutorsCountrySorted);
+        topRatedTutorsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v)
+            {
+                Intent i = new Intent(StudentFirstActivity.this , TopRatedTutors.class);
+                startActivity(i);
+            }
+        });
 
         studentDashboardButton = (LinearLayout) findViewById(R.id.studentDashboardButton);
         studentDashboardButton.setOnClickListener(new View.OnClickListener() {
@@ -65,7 +67,6 @@ public class StudentFirstActivity extends AppCompatActivity
         tutorData = new ArrayList<>();
         tutorData.add(new shAData("Alan" , "www.google.com/Alan" , 5));
         tutorData.add(new shAData("Doug" , "www.google.com/Doug" , 7));
-        tutorData.add(new shAData("Rick" , "www.google.com/Rick" , 9));
 
         tutorsList = new ArrayList<>();
 
@@ -87,21 +88,12 @@ public class StudentFirstActivity extends AppCompatActivity
                     {
                         firstTutorIndicator.setBackgroundResource(R.drawable.circle_pink);
                         secondTutorIndicator.setBackgroundResource(R.drawable.circle_purple);
-                        thirdTutorIndicator.setBackgroundResource(R.drawable.circle_purple);
                     }break;
 
                     case 2:
                     {
                         firstTutorIndicator.setBackgroundResource(R.drawable.circle_purple);
                         secondTutorIndicator.setBackgroundResource(R.drawable.circle_pink);
-                        thirdTutorIndicator.setBackgroundResource(R.drawable.circle_purple);
-                    }break;
-
-                    case 3:
-                    {
-                        firstTutorIndicator.setBackgroundResource(R.drawable.circle_purple);
-                        secondTutorIndicator.setBackgroundResource(R.drawable.circle_purple);
-                        thirdTutorIndicator.setBackgroundResource(R.drawable.circle_pink);
                     }break;
                 }
             }

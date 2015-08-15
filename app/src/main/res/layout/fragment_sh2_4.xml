@@ -16,7 +16,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="My Level of English is"
+            android:text="나의 레벨은"
             android:id="@+id/textview19"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
@@ -43,15 +43,15 @@
             android:layout_below="@+id/sh2_4EnglishLevelTextView"
             android:visibility="invisible"
             android:background="@drawable/circular_button_purple"
-            android:layout_alignRight="@+id/textview19"
-            android:layout_alignEnd="@+id/textview19"
-            android:layout_alignLeft="@+id/textview19"
-            android:layout_alignStart="@+id/textview19" />
+            android:layout_alignRight="@+id/sh2_4ModifyLevelButton"
+            android:layout_alignEnd="@+id/sh2_4ModifyLevelButton"
+            android:layout_alignLeft="@+id/sh2_4ModifyLevelButton"
+            android:layout_alignStart="@+id/sh2_4ModifyLevelButton" />
 
         <Button
             android:layout_width="170dp"
             android:layout_height="50dp"
-            android:text="ModifyLevel"
+            android:text="레벨 수정"
             android:id="@+id/sh2_4ModifyLevelButton"
             android:background="@drawable/circular_button_purple"
             android:layout_alignTop="@+id/sh2_4EnglishLevelSpinner"

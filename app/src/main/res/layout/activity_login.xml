@@ -115,7 +115,8 @@
                         android:layout_centerHorizontal="true"
                         android:background="@drawable/circular_button_purple"
                         android:textColor="@color/white"
-                        android:layout_gravity="center" />
+                        android:layout_gravity="center"
+                        android:textStyle="bold" />
 
                 </LinearLayout>
 

@@ -25,7 +25,8 @@
         android:layout_alignBottom="@+id/sh02_2_1_1TutorImageView"
         android:layout_toStartOf="@+id/sh02_2_1_1SelectTutorButton"
         android:layout_toLeftOf="@+id/sh02_2_1_1SelectTutorButton"
-        android:paddingLeft="15dp" />
+        android:paddingLeft="15dp"
+        android:textStyle="bold" />
 
     <Button
         android:layout_width="120dp"
@@ -39,7 +40,8 @@
         android:layout_alignParentEnd="true"
         android:layout_marginTop="25dp"
         android:layout_marginRight="10dp"
-        android:padding="1dp" />
+        android:padding="1dp"
+        android:textStyle="bold" />
 
 
 </RelativeLayout>

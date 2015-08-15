@@ -27,12 +27,13 @@
                     android:layout_height="match_parent"
                     android:drawableLeft="@drawable/my_point"
                     android:drawableRight="@drawable/select_arrow"
-                    android:text="  My Point"
+                    android:text="마이 포인트"
                     android:id="@+id/sh2MyPointButton"
                     android:gravity="center_vertical|center_horizontal|left"
                     android:background="@color/white"
                     android:paddingLeft="15dp"
-                    android:paddingRight="15dp" />
+                    android:paddingRight="15dp"
+                    android:textStyle="bold" />
 
             </LinearLayout>
 
@@ -45,7 +46,7 @@
                 <Button
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="  My Class"
+                    android:text="나의 수업"
                     android:id="@+id/sh2MyClassButton"
                     android:drawableLeft="@drawable/my_class"
                     android:drawableRight="@drawable/select_arrow"
@@ -58,7 +59,8 @@
                     android:layout_alignParentEnd="true"
                     android:background="@color/white"
                     android:paddingLeft="15dp"
-                    android:paddingRight="15dp" />
+                    android:paddingRight="15dp"
+                    android:textStyle="bold" />
 
             </LinearLayout>
 
@@ -71,7 +73,7 @@
                 <Button
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="  My Tutor"
+                    android:text="관심 강사"
                     android:id="@+id/sh2MyTutorButton"
                     android:drawableLeft="@drawable/my_tutor"
                     android:drawableRight="@drawable/select_arrow"
@@ -83,7 +85,8 @@
                     android:layout_alignParentEnd="true"
                     android:background="@color/white"
                     android:paddingLeft="15dp"
-                    android:paddingRight="15dp" />
+                    android:paddingRight="15dp"
+                    android:textStyle="bold" />
 
             </LinearLayout>
 
@@ -97,7 +100,7 @@
                 <Button
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="  My Level"
+                    android:text="나의 레벨"
                     android:id="@+id/sh2MyLevelButton"
                     android:drawableLeft="@drawable/my_level"
                     android:drawableRight="@drawable/select_arrow"
@@ -109,7 +112,8 @@
                     android:layout_alignParentEnd="true"
                     android:background="@color/white"
                     android:paddingLeft="15dp"
-                    android:paddingRight="15dp" />
+                    android:paddingRight="15dp"
+                    android:textStyle="bold" />
 
             </LinearLayout>
 

@@ -50,7 +50,8 @@
         android:gravity="center_vertical|center_horizontal"
         android:layout_alignRight="@+id/sh01StatusImageView"
         android:layout_alignEnd="@+id/sh01StatusImageView"
-        android:textColor="@color/white" />
+        android:textColor="@color/white"
+        android:textStyle="bold" />
 
     <Button
         android:layout_width="30dp"

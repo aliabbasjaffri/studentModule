@@ -64,7 +64,7 @@ public class SH2_2 extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_sh2_2, container, false);
 
-        ViewPagerAdapter.studentPortalActivity.setToolbar("My Class" , true);
+        ViewPagerAdapter.studentPortalActivity.setToolbar("나의 수업" , true);
 
         Button RCBRButton = (Button) view.findViewById(R.id.sh2_2RCBRButton);
         RCBRButton.setOnClickListener(new View.OnClickListener() {

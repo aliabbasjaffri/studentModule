@@ -73,7 +73,8 @@
                             android:textSize="12sp"
                             android:id="@+id/sponsored_tutor_month_txt"
                             android:text="For the month June"
-                            android:gravity="center" />
+                            android:gravity="center"
+                            android:textStyle="bold" />
 
                     </LinearLayout>
 
@@ -116,7 +117,8 @@
                             android:gravity="center"
                             android:layout_gravity="center"
                             android:text="Jane Robert"
-                            android:id="@+id/tutorOfTheMonthName" />
+                            android:id="@+id/tutorOfTheMonthName"
+                            android:textStyle="bold" />
 
                         <ImageButton
                             android:layout_width="wrap_content"

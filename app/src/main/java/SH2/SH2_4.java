@@ -14,6 +14,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.studentmodule.R;
 import com.studentmodule.ViewPagerAdapter;
@@ -81,7 +82,7 @@ public class SH2_4 extends Fragment {
         // Inflate the layout for this fragment
         final View view = inflater.inflate(R.layout.fragment_sh2_4, container, false);
 
-        ViewPagerAdapter.studentPortalActivity.setToolbar("My Level" , true);
+        ViewPagerAdapter.studentPortalActivity.setToolbar("나의 레벨" , true);
 
         englishLevel = (TextView) view.findViewById(R.id.sh2_4EnglishLevelTextView);
         englishLevel.setText(sharedPreferences.getString("EnglishLevel", ""));
@@ -114,6 +115,8 @@ public class SH2_4 extends Fragment {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 if( !checker.equals(levels[position]) )
                 {
+                    Toast.makeText(getActivity() , "Position " + position  , Toast.LENGTH_SHORT).show();
+
                     englishLevel.setText(levels[position]);
                     editor.putString("EnglishLevel", levels[position]);
                     editor.commit();

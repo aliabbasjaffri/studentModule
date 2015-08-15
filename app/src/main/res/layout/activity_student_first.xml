@@ -83,25 +83,52 @@
                         android:id="@+id/secondTutorIndicator" />
 
                 </LinearLayout>
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp">
-
-                    <View
-                        android:layout_width="15dp"
-                        android:layout_height="15dp"
-                        android:background="@drawable/circle_purple"
-                        android:id="@+id/thirdTutorIndicator" />
-
-                </LinearLayout>
 
 
             </LinearLayout>
 
 
         </LinearLayout>
-        
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/white"
+            android:id="@+id/topRatedTutorsCountrySorted">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="left"
+                android:layout_weight="0.5"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:text="Top Rated Tutors"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|right"
+                android:layout_weight="0.03">
+
+                <ImageView
+                    android:src="@drawable/select_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
@@ -121,7 +148,8 @@
                     android:text="Student Dashboard"
                     android:layout_height="match_parent"
                     android:gravity="center_vertical"
-                    android:paddingLeft="10dp" />
+                    android:paddingLeft="10dp"
+                    android:textStyle="bold" />
 
             </LinearLayout>
 

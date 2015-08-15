@@ -1,0 +1,56 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/weekViewContainer"
+    android:fillViewport="true"
+    android:background="@color/backgroundcolor"
+    tools:context="SH1.SH1_4Root">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="250dp"
+            android:minWidth="250dp"
+            android:maxWidth="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:minHeight="40dp"
+            android:elevation="2dp"
+            android:translationZ="2dp"
+            android:orientation="horizontal"
+            android:id="@+id/sh1_4RootTrialClassAvailability"
+            android:background="@drawable/circular_button_purple"
+            android:layout_gravity="center"
+            android:padding="5dp"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:text="Trial Classes Availability"/>
+
+
+        <TextView
+            android:layout_width="250dp"
+            android:minWidth="250dp"
+            android:maxWidth="300dp"
+            android:layout_height="wrap_content"
+            android:minHeight="40dp"
+            android:elevation="2dp"
+            android:translationZ="2dp"
+
+            android:orientation="horizontal"
+            android:id="@+id/sh1_4RootRegularClassAvailability"
+            android:background="@drawable/circular_button_purple"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:padding="5dp"
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:text="Regular Classes Availability"/>
+
+    </LinearLayout>
+</ScrollView>

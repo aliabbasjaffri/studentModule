@@ -70,7 +70,7 @@ public class SH2_3 extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_sh2_3, container, false);
 
-        ViewPagerAdapter.studentPortalActivity.setToolbar("My Tutor" , true);
+        ViewPagerAdapter.studentPortalActivity.setToolbar("관심 강사" , true);
 
         clearAndAddToArray();
 

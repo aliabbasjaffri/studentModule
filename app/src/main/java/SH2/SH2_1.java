@@ -71,7 +71,7 @@ public class SH2_1 extends Fragment {
 
         clearAndAddToArray();
 
-        ViewPagerAdapter.studentPortalActivity.setToolbar("My Points" , true);
+        ViewPagerAdapter.studentPortalActivity.setToolbar("마이 포인트" , true);
 
         adaptor = new sh21ArrayAdapter( getActivity() , R.layout.layout_sh2_1_custom_row , items );
 
@@ -86,7 +86,9 @@ public class SH2_1 extends Fragment {
             }
         });
 
-        String totalText = "Total \t\t\t\t\t\t\t\t\t\t\t\t" + "1000";
+        int totalValue = 100;
+
+        String totalText = "총계 \t\t\t\t\t\t\t\t\t\t\t\t" + totalValue;
 
         totalButton.setText(totalText);
 
@@ -112,10 +114,10 @@ public class SH2_1 extends Fragment {
         if(!items.isEmpty())
             items.clear();
 
-        items.add(new sh2_1Data("Class Review" , "bla bla" , "bla bla" ));
-        items.add(new sh2_1Data("Question/Opinion" , "bla bla" , "bla bla" ));
-        items.add(new sh2_1Data("Trial Class" , "bla bla" , "bla bla" ));
-        items.add(new sh2_1Data("Class Review" , "bla bla" , "bla bla" ));
-        items.add(new sh2_1Data("May" , "bla bla" , "bla bla" ));
+        items.add(new sh2_1Data("수강후기" , "bla bla" , "bla bla" ));
+        items.add(new sh2_1Data("질문과 의견" , "bla bla" , "bla bla" ));
+        items.add(new sh2_1Data("무료수업듣기" , "bla bla" , "bla bla" ));
+        items.add(new sh2_1Data("수강후기" , "bla bla" , "bla bla" ));
+        items.add(new sh2_1Data("5월" , "bla bla" , "bla bla" ));
     }
 }

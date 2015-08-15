@@ -37,12 +37,12 @@
                 android:orientation="vertical"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:padding="2dp"
+                android:padding="2.5dp"
                 android:id="@+id/sh1DisplayImageContainer"
                 android:layout_gravity="center"
                 android:measureWithLargestChild="false"
                 android:layout_marginTop="40dp"
-                android:background="@color/white">
+                android:background="@drawable/circular_profile_image">
 
                 <LinearLayout
                     android:layout_width="150dp"
@@ -148,7 +148,7 @@
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="New Button"
+                android:text="Video"
                 android:id="@+id/sh1VideoButton"
                 android:layout_below="@+id/sh1PersonalDetails"
                 android:layout_alignParentLeft="true"
@@ -164,7 +164,7 @@
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="New Button"
+                android:text="Audio"
                 android:id="@+id/sh1AudioButton"
                 android:layout_below="@+id/sh1VideoButton"
                 android:layout_alignParentLeft="true"
@@ -180,7 +180,7 @@
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="New Button"
+                android:text="Class Availability"
                 android:id="@+id/sh1Button3"
                 android:background="@color/white"
                 android:gravity="center_vertical|left"
@@ -196,7 +196,7 @@
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="New Button"
+                android:text="Class Review"
                 android:id="@+id/sh1Button4"
                 android:background="@color/white"
                 android:gravity="center_vertical|left"

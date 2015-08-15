@@ -14,7 +14,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Regular Classes Being Requested"
+            android:text="수강신청 중인 정규수업"
             android:id="@+id/sh2_2RCBRButton"
             android:drawableRight="@drawable/select_arrow"
             android:layout_alignParentTop="true"
@@ -32,7 +32,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Trial Classes being Requested"
+            android:text="수강신청 중인 무료수업"
             android:id="@+id/sh2_2TCBRButton"
             android:drawableRight="@drawable/select_arrow"
             android:background="@color/white"
@@ -50,7 +50,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Booked Classes"
+            android:text="수강등록 수업"
             android:id="@+id/sh2_2BookedClassesButton"
             android:drawableRight="@drawable/select_arrow"
             android:background="@color/white"
@@ -68,7 +68,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Completed Classes"
+            android:text="수강완료 수업"
             android:id="@+id/sh2_2CompletedClassesButton"
             android:drawableRight="@drawable/select_arrow"
             android:background="@color/white"
@@ -86,7 +86,7 @@
         <Button
             android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:text="Request Class"
+            android:text="정규수업"
             android:id="@+id/sh2_2RequestClassButton"
             android:background="@drawable/circular_button_purple"
             android:layout_below="@+id/sh2_2CompletedClassesButton"

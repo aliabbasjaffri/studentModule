@@ -7,12 +7,10 @@ import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
-import android.media.ExifInterface;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,8 +20,6 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import com.studentmodule.R;
-import java.io.IOException;
-import SH4.*;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -41,7 +37,7 @@ public class SH1 extends Fragment
     private static final String tutorNameParam = "param1";
 
     // TODO: Rename and change types of parameters
-    private String mtutorName;
+    private String mTutorName;
 
     public static String profile_pic_path;
 
@@ -61,8 +57,8 @@ public class SH1 extends Fragment
     TextView universityName;
     Button video;
     Button audio;
-    Button button3;
-    Button button4;
+    Button classAvailability;
+    Button classReview;
 
     /**
      * Use this factory method to create a new instance of
@@ -91,7 +87,7 @@ public class SH1 extends Fragment
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-            mtutorName = getArguments().getString(tutorNameParam);
+            mTutorName = getArguments().getString(tutorNameParam);
         }
 
         bitmap_original_dp = null;
@@ -120,12 +116,12 @@ public class SH1 extends Fragment
         profileDetail = (TextView) view.findViewById(R.id.sh1PersonalDetails);
         universityName = (TextView) view.findViewById(R.id.sh1UniversityName);
 
-        profileName.setText(mtutorName);
+        profileName.setText(mTutorName);
 
         video = (Button) view.findViewById(R.id.sh1VideoButton);
         audio = (Button) view.findViewById(R.id.sh1AudioButton);
-        button3 = (Button) view.findViewById(R.id.sh1Button3);
-        button4 = (Button) view.findViewById(R.id.sh1Button4);
+        classAvailability = (Button) view.findViewById(R.id.sh1Button3);
+        classReview = (Button) view.findViewById(R.id.sh1Button4);
 
         bitmap_original_dp = BitmapFactory.decodeResource(getResources(), R.drawable.jane);
 
@@ -206,7 +202,8 @@ public class SH1 extends Fragment
         profilePictureBadge.setBackgroundResource(R.drawable.tutor_profile_badge);
         countryPicture.setBackgroundResource(R.drawable.country);
 
-        final Fragment fragment = new SH1_5();
+        final Fragment fragment3 = new SH1_4Root();
+        final Fragment fragment4 = new SH1_5();
 
         video.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -222,20 +219,17 @@ public class SH1 extends Fragment
             }
         });
 
-        button3.setOnClickListener(new View.OnClickListener() {
+        classAvailability.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.teacherProfile, SH4.newInstance() ).setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN).addToBackStack("").commit();
-
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.teacherProfile, fragment3).setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN).addToBackStack("").commit();
             }
         });
 
-        button4.setOnClickListener(new View.OnClickListener() {
+        classReview.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v)
-            {
-                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.teacherProfile, fragment).setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN).addToBackStack("").commit();
+            public void onClick(View v) {
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.teacherProfile, fragment4).setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN).addToBackStack("").commit();
             }
         });
 

@@ -78,7 +78,7 @@ public class SH2 extends Fragment {
             @Override
             public void onClick(View v)
             {
-                getActivity().getSupportFragmentManager().beginTransaction().add(R.id.frame_container, myPointFragment).setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE).addToBackStack("").commit();
+                getActivity().getSupportFragmentManager().beginTransaction().add(R.id.frame_container, myPointFragment).setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN).addToBackStack("").commit();
             }
         });
 
@@ -87,7 +87,7 @@ public class SH2 extends Fragment {
             @Override
             public void onClick(View v)
             {
-                getActivity().getSupportFragmentManager().beginTransaction().add(R.id.frame_container, myClassFragment).setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE).addToBackStack("").commit();
+                getActivity().getSupportFragmentManager().beginTransaction().add(R.id.frame_container, myClassFragment).setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN).addToBackStack("").commit();
             }
         });
 
@@ -96,7 +96,7 @@ public class SH2 extends Fragment {
             @Override
             public void onClick(View v)
             {
-                getActivity().getSupportFragmentManager().beginTransaction().add(R.id.frame_container, myTutorFragment).setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE).addToBackStack("").commit();
+                getActivity().getSupportFragmentManager().beginTransaction().add(R.id.frame_container, myTutorFragment).setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN).addToBackStack("").commit();
             }
         });
 
@@ -105,7 +105,7 @@ public class SH2 extends Fragment {
             @Override
             public void onClick(View v)
             {
-                getActivity().getSupportFragmentManager().beginTransaction().add(R.id.frame_container, myLevelFragment).setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE).addToBackStack("").commit();
+                getActivity().getSupportFragmentManager().beginTransaction().add(R.id.frame_container, myLevelFragment).setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN).addToBackStack("").commit();
             }
         });
 

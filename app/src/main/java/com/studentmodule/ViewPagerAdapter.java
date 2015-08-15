@@ -29,7 +29,7 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
             R.drawable.nowon
     };
 
-    private String tabTitles[] = new String[] { "마이페이지", "쌤께말걸기", "수강신청" , "Now On" };
+    private String tabTitles[] = new String[] { "마이페이지", "쌤께말걸기", "수강신청" , "나우온" };
 
 
     public ViewPagerAdapter(FragmentManager fm , Context context , StudentPortalActivity activity )
