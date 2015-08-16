@@ -62,7 +62,7 @@ public class sh15ArrayAdapter extends ArrayAdapter<sh1_5Data>
             @Override
             public void onClick(View v)
             {
-                Fragment fragment = SH1_5_1.newInstance(item.getButtonInfo(), item.getListInfo(), item.getListDetail(), position);
+                Fragment fragment = SH1_5_1.newInstance(item.getButtonInfo(), item.getListInfo(), item.getListDetail(), position , item.getButtonType());
                 ((TeacherProfileActivity)context).getSupportFragmentManager().beginTransaction().add(R.id.teacherProfile, fragment).setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN).addToBackStack("").commit();
             }
         });

@@ -23,7 +23,7 @@
                 android:elevation="2dp"
                 android:translationZ="2dp"
                 android:orientation="horizontal"
-                android:id="@+id/see_requested_classes"
+                android:id="@+id/sh1_4_1RequestedClasses"
                 android:background="@drawable/daily_event_selector"
                 android:gravity="center"
                 android:layout_gravity="center"
@@ -35,8 +35,9 @@
                     android:textSize="15sp"
                     android:gravity="center"
                     android:textColor="@color/white"
-                    android:id="@+id/see_requested_classes_text"
-                    android:text="Requested Trial Classes"/>
+                    android:id="@+id/sh1_4_1RequestedClassesTextView"
+                    android:text="Requested Trial Classes"
+                    android:textStyle="bold" />
 
             </LinearLayout>
         </LinearLayout>
@@ -59,7 +60,7 @@
                 android:textSize="15sp"
                 android:textStyle="bold|italic"
                 android:textColor="@color/white"
-                android:id="@+id/availability_table_header"
+                android:id="@+id/sh1_4_1AvailabilityTableHeader"
                 android:text="Trial Classes Availability"/>
         </LinearLayout>
 
@@ -71,7 +72,7 @@
             android:padding="10dp"
             android:gravity="center"
             android:textSize="12sp"
-            android:id="@+id/no_timetable_text"
+            android:id="@+id/sh1_4_1NoTimetableText"
             android:visibility="gone"
             android:background="@color/backgroundcolor"
             android:textColor="@color/white">
@@ -82,7 +83,7 @@
             android:layout_height="wrap_content"
             android:visibility="visible"
             android:padding="3dp"
-            android:id="@+id/timetable_container"
+            android:id="@+id/sh1_4_1TimetableContainer"
             android:gravity="center_horizontal"
             android:orientation="vertical">
 
@@ -97,7 +98,7 @@
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
-                    android:id="@+id/monday_label"
+                    android:id="@+id/sh1_4_1MondayLabel"
                     android:text="MON"
                     android:textColor="@color/white"
                     android:textStyle="bold" />
@@ -106,7 +107,7 @@
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
-                    android:id="@+id/tuesday_label"
+                    android:id="@+id/sh1_4_1TuesdayLabel"
                     android:text="TUE"
                     android:textColor="@color/white"
                     android:textStyle="bold" />
@@ -114,7 +115,7 @@
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
-                    android:id="@+id/wednesday_label"
+                    android:id="@+id/sh1_4_1WednesdayLabel"
                     android:gravity="center_horizontal"
                     android:text="WED"
                     android:textColor="@color/white"
@@ -123,7 +124,7 @@
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
-                    android:id="@+id/thursday_label"
+                    android:id="@+id/sh1_4_1ThursdayLabel"
                     android:gravity="center_horizontal"
                     android:text="THU"
                     android:textColor="@color/white"
@@ -133,7 +134,7 @@
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
-                    android:id="@+id/friday_label"
+                    android:id="@+id/sh1_4_1FridayLabel"
                     android:text="FRI"
                     android:textColor="@color/white"
                     android:textStyle="bold" />
@@ -141,7 +142,7 @@
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
-                    android:id="@+id/saturday_label"
+                    android:id="@+id/sh_1_4_1SaturdayLabel"
                     android:gravity="center_horizontal"
                     android:text="SAT"
                     android:textColor="@color/white"
@@ -149,7 +150,7 @@
                 <TextView
                     android:layout_width="0dp"
                     android:layout_weight="1"
-                    android:id="@+id/sunday_label"
+                    android:id="@+id/sh1_4_1SundayLabel"
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
                     android:text="SUN"
@@ -163,7 +164,7 @@
                 android:layout_height="wrap_content">
                 <LinearLayout
                     android:orientation="vertical"
-                    android:id="@+id/monday_classes_layout"
+                    android:id="@+id/sh1_4_1MondayClassesLayout"
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="fill_parent">
@@ -173,7 +174,7 @@
                 </LinearLayout>
                 <LinearLayout
                     android:orientation="vertical"
-                    android:id="@+id/tuesday_classes_layout"
+                    android:id="@+id/sh1_4_1TuesdayClassesLayout"
                     android:layout_width="0dp"
                     android:layout_weight="1"
 
@@ -183,7 +184,7 @@
                 </LinearLayout>
                 <LinearLayout
                     android:orientation="vertical"
-                    android:id="@+id/wednesday_classes_layout"
+                    android:id="@+id/sh1_4_1WednesdayClassesLayout"
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="fill_parent">
@@ -193,7 +194,7 @@
                 </LinearLayout>
                 <LinearLayout
                     android:orientation="vertical"
-                    android:id="@+id/thursday_classes_layout"
+                    android:id="@+id/sh1_4_1ThursdayClassesLayout"
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="fill_parent">
@@ -202,7 +203,7 @@
                 </LinearLayout>
                 <LinearLayout
                     android:orientation="vertical"
-                    android:id="@+id/friday_classes_layout"
+                    android:id="@+id/sh1_4_1FridayClassesLayout"
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="fill_parent">
@@ -211,7 +212,7 @@
                 </LinearLayout>
                 <LinearLayout
                     android:orientation="vertical"
-                    android:id="@+id/saturday_classes_layout"
+                    android:id="@+id/sh1_4_1SaturdayClassesLayout"
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="fill_parent">
@@ -220,7 +221,7 @@
                 </LinearLayout>
                 <LinearLayout
                     android:orientation="vertical"
-                    android:id="@+id/sunday_classes_layout"
+                    android:id="@+id/sh1_4_1SundayClassesLayout"
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="fill_parent">
@@ -237,7 +238,7 @@
             android:padding="10dp"
             android:visibility="visible"
 
-            android:id="@+id/classes_availability_pb"
+            android:id="@+id/sh1_4_1ClassesAvailabilityPb"
             android:layout_gravity="center" />
 
 

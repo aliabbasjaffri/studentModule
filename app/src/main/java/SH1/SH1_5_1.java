@@ -29,11 +29,13 @@ public class SH1_5_1 extends Fragment {
     private static final String listTitle = "param2";
     private static final String listDetail = "param3";
     private static final String position = "param4";
+    private static final String buttonType = "param5";
 
     // TODO: Rename and change types of parameters
     private String mButtonInfo;
     private String mListInfo;
     private String mListDetail;
+    private Boolean mButtonType;
     private int mPosition;
 
     private ListView LV;
@@ -50,7 +52,7 @@ public class SH1_5_1 extends Fragment {
      * @return A new instance of fragment SH1_5_1.
      */
     // TODO: Rename and change types and number of parameters
-    public static SH1_5_1 newInstance(String param1, String param2, String param3 , int param4)
+    public static SH1_5_1 newInstance(String param1, String param2, String param3 , int param4 , Boolean param5)
     {
         SH1_5_1 fragment = new SH1_5_1();
         Bundle args = new Bundle();
@@ -58,6 +60,7 @@ public class SH1_5_1 extends Fragment {
         args.putString(listTitle, param2);
         args.putString(listDetail, param3);
         args.putInt(position, param4);
+        args.putBoolean(buttonType , param5);
         fragment.setArguments(args);
         return fragment;
     }
@@ -74,6 +77,7 @@ public class SH1_5_1 extends Fragment {
             mListInfo = getArguments().getString(listTitle);
             mListDetail = getArguments().getString(listDetail);
             mPosition = getArguments().getInt(position);
+            mButtonType = getArguments().getBoolean(buttonType);
         }
     }
 
@@ -83,12 +87,20 @@ public class SH1_5_1 extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_sh1_5_1, container, false);
 
-        RelativeLayout rl = (RelativeLayout) view.findViewById(R.id.fragmentSH1_5_1Row);
-        Button button = (Button) rl.findViewById(R.id.sh1_5Button);
+        RelativeLayout relativeLayout = (RelativeLayout) view.findViewById(R.id.fragmentSH1_5_1Row);
+        Button button = (Button) relativeLayout.findViewById(R.id.sh1_5Button);
         button.setText(mButtonInfo);
-        TextView listInfo = (TextView) rl.findViewById(R.id.sh1_5ListInfo);
+
+
+        if( mButtonType )
+            button.setBackgroundResource(R.drawable.regular);
+        else
+            button.setBackgroundResource(R.drawable.trial);
+
+
+        TextView listInfo = (TextView) relativeLayout.findViewById(R.id.sh1_5ListInfo);
         listInfo.setText(mListInfo);
-        TextView listDetail = (TextView) rl.findViewById(R.id.sh1_5ListDetail);
+        TextView listDetail = (TextView) relativeLayout.findViewById(R.id.sh1_5ListDetail);
         listDetail.setText(mListDetail);
 
         RatingBar rb = (RatingBar) view.findViewById(R.id.sh1_5_1RatingBar);

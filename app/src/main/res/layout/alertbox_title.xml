@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView
+    android:layout_width="fill_parent"
+    android:id="@+id/alertboxTitleText"
+    android:textColor="@color/white"
+    android:background="@color/weekdaycolor"
+    android:textSize="20sp"
+    android:padding="15dp"
+    android:gravity="center"
+    android:layout_height="wrap_content"
+    android:textStyle="bold"
+    xmlns:android="http://schemas.android.com/apk/res/android" />
+

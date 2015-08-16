@@ -2,6 +2,7 @@ package SH1;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -33,11 +34,9 @@ public class SH1_4Root extends Fragment {
      * @return A new instance of fragment SH1_4Root.
      */
     // TODO: Rename and change types and number of parameters
-    public static SH1_4Root newInstance(String param1, String param2) {
+    public static SH1_4Root newInstance( )
+    {
         SH1_4Root fragment = new SH1_4Root();
-        Bundle args = new Bundle();
-        //args.putString(ClassType, param1);
-        fragment.setArguments(args);
         return fragment;
     }
 
@@ -59,6 +58,33 @@ public class SH1_4Root extends Fragment {
 
         trialClasses = (TextView) view.findViewById(R.id.sh1_4RootTrialClassAvailability);
         regularClasses = (TextView) view.findViewById(R.id.sh1_4RootRegularClassAvailability);
+
+        final SH1_4_1 fragment = new SH1_4_1();
+        final Bundle bundle = new Bundle();
+
+        trialClasses.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                bundle.putInt(SH1_4_1.CLASS_TYPE,SH1_4_1.TRIAL);
+                fragment.setArguments(bundle);
+
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.teacherProfile, fragment).setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN).addToBackStack("").commit();
+            }
+        });
+
+        regularClasses.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                bundle.putInt(SH1_4_1.CLASS_TYPE,SH1_4_1.REGULAR);
+                fragment.setArguments(bundle);
+
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.teacherProfile, fragment).setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN).addToBackStack("").commit();
+            }
+        });
 
         return view;
     }

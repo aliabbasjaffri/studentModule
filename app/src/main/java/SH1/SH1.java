@@ -202,6 +202,8 @@ public class SH1 extends Fragment
         profilePictureBadge.setBackgroundResource(R.drawable.tutor_profile_badge);
         countryPicture.setBackgroundResource(R.drawable.country);
 
+        final Fragment fragment1;
+        final Fragment fragment2;
         final Fragment fragment3 = new SH1_4Root();
         final Fragment fragment4 = new SH1_5();
 
